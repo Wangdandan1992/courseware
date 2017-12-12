@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+		<style>
+			
+		</style>
+		<script>
+			/*
+				箭头函数
+					语法： 形参列表 => 函数体
+
+					特点：
+						1. 箭头函数中的this，绑定的是所在作用域上下文的this
+
+				写成函数表达式
+			*/
+
+
+
+
+		</script>
+	</head>
+
+	<body>
+		<ul id="list">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+		</ul>
+		<script>
+			// 1
+			/*let miaov = 10;
+			let o = {
+				miaov:20,
+				fn: () => {
+					console.log(this.miaov);
+					return function (){
+						console.log(this.miaov);	
+					}	
+				}
+			}
+			
+			let f = o.fn();
+			f();*/
+
+
+			// 2
+			let miaov = 10;
+			let o = {
+				miaov:20,
+				fn: function ()  {
+					console.log(this.miaov);
+					return  () => {
+						console.log(this.miaov);
+					}
+				}
+			}
+			
+			
+
+
+		</script>
+	</body>
+</html>

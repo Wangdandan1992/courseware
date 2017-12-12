@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+		<style>
+			
+		</style>
+		<script>
+			/*
+				声明变量
+					var
+					let
+						1. 同一个作用域下不能声明同名的变量
+						2. 不会把声明全局变量放在window上
+						3. 在所在的块中会形成块级作用域
+							if for while switch
+
+				var 变量提升
+			*/
+
+			if(false){
+				var miaov = 10;
+				let ketang  =20;
+			}
+
+			console.log(miaov);
+			//console.log(ketang);  // 找不到变量名是引用错误ReferenceError
+
+			for( let i = 0; i < 10; i++ ){
+				
+			}
+
+			//console.log(i);
+
+
+		</script>
+	</head>
+
+	<body>
+		
+	</body>
+</html>

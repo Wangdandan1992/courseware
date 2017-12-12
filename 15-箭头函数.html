@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+		<style>
+			
+		</style>
+		<script>
+			/*
+				箭头函数
+					语法： 形参列表 => 函数体
+
+					特点：
+						1. 箭头函数中的this，绑定的是所在作用域上下文的this
+
+				写成函数表达式
+			*/
+
+
+
+
+		</script>
+	</head>
+
+	<body>
+		<ul id="list">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+		</ul>
+		<script>
+			
+			let miaov = 10;
+			let o = {
+				miaov:20,
+				fn:function (){
+					console.log(this.miaov);
+					return function (){
+						console.log(this.miaov);	
+					}	
+				}
+			}
+
+			/*
+				20 10      20 20  10 10
+			*/
+			/*
+				o.fn执行，fn函数中this指向的是o ，函数中打出的值为o.miaov
+				执行之后有一个返回值为函数，函数给一个变量了，直接把这个函数执行了，这个函数中this指向window。又由于let声明的变量并不会放在window身上，结果是undefined
+			*/
+			let f = o.fn();
+			f();
+
+
+		</script>
+	</body>
+</html>

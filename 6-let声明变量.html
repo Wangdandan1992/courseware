@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+		<style>
+			
+		</style>
+		<script>
+			/*
+				声明变量
+					var
+					let
+						1. 同一个作用域下不能声明同名的变量
+						2. 不会把声明全局变量放在window上
+						3. 在所在的块中会形成块级作用域
+							if for while switch
+						4. 不会变量提升
+
+				只要块级作用域内存在let命令，它所声明的变量就“绑定”（binding）这个区域，不再受外部的影响。
+				称呼叫做暂存死区（ TDZ）
+
+				var 变量提升
+			*/
+
+
+
+
+		</script>
+	</head>
+
+	<body>
+		<ul id="list">
+			<li>1</li>
+			<li>3</li>
+			<li>2</li>
+			<li>4</li>
+		</ul>
+		<script>
+			// 块级作用域
+//			{
+//				let miaov = 10;
+//				let miaov = 10;
+//			}
+//
+//			console.log(miaov);
+
+//			function fn(){
+//				let miaov = 10;
+//				let miaov = 10;	
+//			}
+//
+//			fn()
+			console.log(abc);  // 不存在变量提升
+			let abc = 10;
+
+		</script>
+	</body>
+</html>

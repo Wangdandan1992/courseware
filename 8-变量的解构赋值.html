@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+		<style>
+			
+		</style>
+		<script>
+			/*
+				变量的解构赋值
+					数组的解构赋值
+						let [a,b,c] = [1,2,3]
+					对象的解构赋值
+						let {a,b} = {a:1,b:2}
+
+					默认值：
+						let {a=10,b=20,c=100} = {a:1,b:2}
+							右边的对象中没有左边对用的属性，那么按照默认值
+					别名：
+						let {a:width,b:height,c=100} = {a:1,b:2}
+
+						不能使用a，而使用width
+			*/
+
+			let arr = [1,2,3,4,5,6]
+
+			/*let a = arr[0]
+			let b = arr[1]
+			let c = arr[2]*/
+
+			// 语法: let [a,b,c] = [1,2,3]
+
+			/*let [a,b,c,d,f,g,h] = arr;
+
+			console.log(a,b,c,d,f,g,h);*/
+
+			let o = {a:1,b:2}
+
+			let {a:width=100,b:height,c=true} = o;
+
+			//console.log(a,b,c);
+			console.log(width);
+
+			let [str1,str2,str3] = 'miaovketang';
+
+			console.log(str1,str2,str3);
+
+		</script>
+	</head>
+
+	<body>
+		
+	</body>
+</html>

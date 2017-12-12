@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+		<style>
+			
+		</style>
+		<script>
+			/*
+				变量的解构赋值
+					数组的解构赋值
+						let [a,b,c] = [1,2,3]
+					对象的解构赋值
+						let {a,b} = {a:1,b:2}
+
+					默认值：
+						let {a=10,b=20,c=100} = {a:1,b:2}
+							右边的对象中没有左边对用的属性，那么按照默认值
+					别名：
+						let {a:width,b:height,c=100} = {a:1,b:2}
+
+						不能使用a，而使用width
+			*/
+
+			// 工具函数，帮助按成某一项特定的功能
+
+			// 匿名函数自执行
+
+			let tools = (function (){
+				function add(a,b){
+					return a+b;
+				}
+
+				function isFunction(fn){
+					return typeof fn === 'function'
+				}
+
+				function firstChartoUpper(str){
+					return 	str.charAt(0).toUpperCase()+str.slice(1)
+				}
+
+				// 暴露出去
+				return {
+					add:add,
+					isFunction:isFunction,
+					firstChartoUpper:firstChartoUpper
+				}
+			})();
+
+			let {add,firstChartoUpper} = tools;
+
+			// 字符串的首字母大写
+
+			let str = 'miaov';
+
+			/*tools.firstChartoUpper(str)
+			tools.add(1,2)*/
+
+			console.log(add(1,2));
+			console.log(firstChartoUpper(str));
+
+			let {
+					floor,
+					ceil,
+					random
+				} = Math;
+
+			console.log(floor(123.123));
+
+
+		</script>
+	</head>
+
+	<body>
+		
+	</body>
+</html>

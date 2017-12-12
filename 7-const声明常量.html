@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+		<style>
+			
+		</style>
+		<script>
+			/*
+				常量,变量的值不会改变
+					给常量的值是引用类型的，通过常量是可以改这个引用类型的值，例如：对象
+			*/
+
+			var _miaov = 10;
+			const ketang = 1000;
+
+			//ketang = 20;
+
+			const abc = {};
+
+//			abc = []; // 改的是常量的值，报错
+
+			abc.a = 10; // 找到这个对象，改变了对象
+
+			console.log(abc);
+
+		</script>
+	</head>
+
+	<body>
+		
+	</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+		<style>
+			
+		</style>
+		<script>
+			/*
+				声明变量
+					var
+					let
+						1. 同一个作用域下不能声明同名的变量
+						2. 不会把声明全局变量放在window上
+						3. 在所在的块中会形成块级作用域
+							if for while switch
+
+				var 变量提升
+			*/
+
+
+
+
+		</script>
+	</head>
+
+	<body>
+		<ul id="list">
+			<li>1</li>
+			<li>3</li>
+			<li>2</li>
+			<li>4</li>
+		</ul>
+		<script>
+			// 函数查找变量时候，找函数定义时的作用域的变量，而不是执行位置所在作用域
+			function fn(){
+				let a = 10;
+				return function (){
+					console.log(a);	
+				}
+			}
+
+			let f = fn();
+
+			document.onclick = function (){
+				let a = 20;
+				f();	// 10
+			}
+
+		</script>
+	</body>
+</html>

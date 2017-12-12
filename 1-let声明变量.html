@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+		<style>
+			
+		</style>
+		<script>
+			/*
+				声明变量
+					var
+					let
+						1. 同一个作用域下不能声明同名的变量
+						2. 不会把声明全局变量放在window上
+			*/
+
+			/*let miaov = 10;
+			document.onclick = function (){
+				alert(miaov)	
+			}
+
+
+
+			let miaov = 20;*/
+
+			// 自动会把声明的的全局变量作为window的属性
+			var miaov = 20;
+
+			alert(window.miaov)
+
+			let ketang = 30;
+			alert(window.ketang);  
+
+
+		</script>
+	</head>
+
+	<body>
+		
+	</body>
+</html>

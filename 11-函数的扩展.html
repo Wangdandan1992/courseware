@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+		<style>
+			
+		</style>
+		<script>
+			/*
+				函数 一等公民
+			*/
+
+			/*function fn(){
+				console.log(this);
+			}
+
+			fn();*/
+
+
+
+			let o = {
+				fn:function (){
+					console.log(this);	// window
+				}
+			}
+			o["fn"](); // this => o
+			// 右边是通过o.fn取出fn对应的函数，把这个函数赋给左边的变量
+			let f = o.fn; // // 谁调用指向谁
+
+			f();
+
+			let arr = [function (){
+				console.log(this);	
+			},1,2,3]
+			arr[0](); // this => arr
+
+			let fn123 = arr[0]
+
+			fn123();
+
+		</script>
+	</head>
+
+	<body>
+		
+	</body>
+</html>

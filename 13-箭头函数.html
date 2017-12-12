@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+		<style>
+			
+		</style>
+		<script>
+			/*
+				箭头函数
+					语法： 形参列表 => 函数体
+
+				写成函数表达式
+			*/
+
+			// 1写法 函数体就是return的值
+
+			let add = (a,b) => a+b;
+
+			console.log(add(1,2));
+
+			//2写法 函数体就是return的值
+
+			let add2 = a => a+10;
+
+			console.log(add2(5));
+
+			//3写法 函数体就是return的值
+			let add3 = () => 10+10;
+
+			console.log(add3());
+
+			//4写法 
+			let add4 = () => {
+				if(true){}
+				return 10+10
+			};
+
+			console.log(add4());
+
+			//4写法 返回对象，需要小括号
+			//let add5 = () => ({a:1});
+			let add5 = () => {
+				return {
+					a:1
+				}
+			};
+
+			console.log(add5());
+
+		</script>
+	</head>
+
+	<body>
+		
+	</body>
+</html>

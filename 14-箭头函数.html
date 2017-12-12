@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+		<style>
+			
+		</style>
+		<script>
+			/*
+				箭头函数
+					语法： 形参列表 => 函数体
+
+					特点：
+						1. 箭头函数中的this，绑定的是所在作用域上下文的this
+
+				写成函数表达式
+			*/
+
+
+
+
+		</script>
+	</head>
+
+	<body>
+		<ul id="list">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+		</ul>
+		<script>
+			let lis = document.querySelectorAll('li');
+			// 点击li，一秒之后变红色
+			for( var i = 0; i < lis.length; i++ ){
+				lis[i].onclick  = function (){
+					//let that = this;
+					/*setTimeout(function (){
+						that.style.background = 'red';	
+					},1000)	*/
+					// 这个箭头函数绑定的是点击li所执行的函数的this
+					setTimeout(() => {
+						console.log(this);
+						this.style.background = 'red';	
+					},1000)
+				}
+			}
+		</script>
+	</body>
+</html>
